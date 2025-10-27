@@ -1,0 +1,80 @@
+<!-- SLIDE 13: Discussion -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">Discussion: Implications & Limitations</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-6xl grid grid-cols-2 gap-10 items-start mt-10">
+
+            <!-- Cột trái: Implications -->
+            <div class="col-span-1 space-y-6">
+                <h2 class="text-3xl font-bold text-gray-800 text-center">Implications for Cybersecurity</h2>
+                 <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-blue-800 flex items-center mb-2">
+                        <i class="fas fa-user-check mr-3"></i>Human-Centric XAI is Key
+                    </h3>
+                    <p class="text-lg text-gray-700">The evaluation of XAI systems must shift from being purely model-centric to being human-centric. The ultimate test is not mathematical correctness, but <span class="font-semibold">utility for the human analyst</span>.</p>
+                </div>
+                 <div class="bg-white p-5 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                        <i class="fas fa-tools mr-3"></i>XAI is a Tool, Not a Panacea
+                    </h3>
+                    <p class="text-lg text-gray-700">XAI frameworks like SHAP are powerful starting points, but they are not a "plug-and-play" solution. They require careful integration and post-processing to be effective in an operational workflow.</p>
+                </div>
+            </div>
+
+            <!-- Cột phải: Limitations -->
+            <div class="col-span-1 space-y-6">
+                <h2 class="text-3xl font-bold text-gray-800 text-center">Limitations of This Study</h2>
+                <div class="bg-white p-5 rounded-lg shadow-md border-l-4 border-yellow-500">
+                    <h3 class="text-xl font-bold text-yellow-800 flex items-center mb-2">
+                        <i class="fas fa-database mr-3"></i>Generalizability vs. Artifacts
+                    </h3>
+                    <p class="text-lg text-gray-700">While SHAP shows <span class="font-semibold">what</span> the model learned, it's hard to distinguish between generalizable security rules and statistical artifacts specific to the static CIC-IDS-2017 dataset.</p>
+                </div>
+                 <div class="bg-white p-5 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 flex items-center mb-2">
+                        <i class="fas fa-users mr-3"></i>Lack of User Study
+                    </h3>
+                    <p class="text-lg text-gray-700">Our assessment of "utility" is based on established security principles. A formal user study with SOC analysts would be needed to definitively measure the impact on real-world workflows.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+</html>

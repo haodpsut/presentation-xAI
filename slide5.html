@@ -1,0 +1,88 @@
+<!-- SLIDE 5: The Research Question: "Mind the Gap" -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Research Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">So, XAI Solves Everything, Right? ...Not So Fast.</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-6xl flex flex-col justify-center items-center mt-8">
+
+            <div class="text-center">
+                <p class="text-2xl text-gray-600">Most research stops here:</p>
+                <div class="mt-4 flex items-center justify-center space-x-4 text-2xl font-semibold">
+                    <div class="p-4 bg-white rounded-lg shadow">Train Model</div>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <div class="p-4 bg-white rounded-lg shadow">Apply XAI</div>
+                    <i class="fas fa-arrow-right text-gray-400"></i>
+                    <div class="p-4 bg-green-100 rounded-lg shadow text-green-800">Show Results</div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center text-red-600">
+                <p class="text-3xl font-bold">But this overlooks a critical "last-mile" problem.</p>
+            </div>
+
+            <div class="mt-8 w-full bg-red-50 p-8 rounded-lg border-2 border-red-200">
+                 <h2 class="text-3xl font-bold text-red-800 text-center mb-4">Mind the Gap: Theoretical vs. Practical Explainability</h2>
+                 <div class="grid grid-cols-2 gap-8 items-center text-xl">
+                     <!-- Cột trái: Lý thuyết -->
+                     <div class="text-center">
+                         <i class="fas fa-lightbulb text-6xl text-yellow-500 mb-3"></i>
+                         <h3 class="font-bold text-2xl text-gray-800">Theoretical XAI Output</h3>
+                         <p class="text-gray-700 mt-2">Provides mathematically sound feature attributions.</p>
+                         <div class="mt-4 p-3 bg-gray-200 font-mono rounded">ACK Flag Count = 1.473</div>
+                     </div>
+                     <!-- Cột phải: Thực tế -->
+                      <div class="text-center">
+                         <i class="fas fa-user-tie text-6xl text-blue-600 mb-3"></i>
+                         <h3 class="font-bold text-2xl text-gray-800">Practical Analyst Need</h3>
+                         <p class="text-gray-700 mt-2">Needs human-readable, actionable insights.</p>
+                         <div class="mt-4 p-3 bg-blue-100 font-mono rounded">ACK Flag Count = 1 (ON)</div>
+                     </div>
+                 </div>
+            </div>
+
+             <div class="mt-8 text-center p-4 bg-yellow-50 rounded-lg w-full max-w-5xl">
+                <h3 class="text-2xl font-bold" style="color: #003366;">Our Research Question:</h3>
+                <p class="text-xl text-gray-700 mt-2">To what extent can standard XAI methods generate <span class="font-bold">genuinely practical and intelligible</span> insights for security analysts, and what is required to bridge this gap?</p>
+            </div>
+        </div>
+
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+</html>

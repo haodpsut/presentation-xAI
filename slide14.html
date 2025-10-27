@@ -1,0 +1,71 @@
+<!-- SLIDE 14: Conclusion -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center">
+            <h1 class="text-5xl font-bold" style="color: #003366;">Conclusion</h1>
+            <div class="w-24 h-1.5 mt-4 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow w-full max-w-5xl flex flex-col justify-center space-y-8 mt-8">
+
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <i class="fas fa-search-minus text-5xl text-red-500 mr-6 mt-1"></i>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">The "Last-Mile" Problem is Real</h2>
+                    <p class="text-xl text-gray-700 mt-2">Our analysis confirms that standard application of XAI on preprocessed data results in explanations that are <span class="font-semibold">unintelligible</span> and lack practical utility for security analysts.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <i class="fas fa-road text-5xl text-blue-500 mr-6 mt-1"></i>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800">Post-Processing is the Bridge</h2>
+                    <p class="text-xl text-gray-700 mt-2">We demonstrated that essential post-processing steps, like <span class="font-semibold">inverse transformation</span> and <span class="font-semibold">contextualization</span>, are required to translate raw XAI outputs into actionable, human-readable insights.</p>
+                </div>
+            </div>
+
+             <div class="w-full max-w-4xl mt-6 text-center p-4 bg-yellow-100 rounded-lg">
+                <h3 class="text-2xl font-bold" style="color: #003366;">Final Message: Mind the Gap</h3>
+                <p class="text-xl text-gray-700 mt-2">To unlock the true potential of XAI in cybersecurity, the community must move beyond theoretical explainability and focus on building <span class="font-bold">truly practical, human-centric</span> interpretation workflows.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>

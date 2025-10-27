@@ -1,0 +1,78 @@
+<!-- SLIDE 4: The Promise of XAI -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Promise of XAI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">The Solution: Explainable AI (XAI)</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-5xl flex flex-col justify-center items-center space-y-10 mt-8">
+            
+            <!-- Phần 1: XAI là gì? -->
+            <div class="w-full flex items-center p-6 bg-white rounded-lg shadow-md">
+                <div class="flex-shrink-0 mr-8">
+                    <i class="fas fa-search-plus text-7xl" style="color: #2196F3;"></i>
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-gray-800">What is Explainable AI?</h2>
+                    <p class="text-xl text-gray-600 mt-2">A set of methods that allow us to understand and interpret the predictions made by machine learning models like Deep Neural Networks.</p>
+                </div>
+            </div>
+
+            <!-- Mũi tên luồng -->
+            <div class="text-center text-4xl text-gray-400">
+                 <i class="fas fa-long-arrow-alt-down"></i>
+            </div>
+            
+            <!-- Phần 2: Giới thiệu SHAP -->
+            <div class="w-full bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 mr-8">
+                        <i class="fas fa-cogs text-7xl text-blue-700"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold text-blue-800">Our Tool of Choice: SHAP</h2>
+                        <p class="text-xl text-gray-700 mt-2"><strong>SH</strong>apley <strong>A</strong>dditive ex<strong>P</strong>lanations is a state-of-the-art XAI framework that explains a prediction by computing the contribution of each feature to that prediction.</p>
+                        <p class="text-xl text-gray-700 mt-2">It answers the question: <strong>"How much did each feature push the model's decision?"</strong></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/t4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+</html>

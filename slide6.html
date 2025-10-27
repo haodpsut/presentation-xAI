@@ -1,0 +1,77 @@
+<!-- SLIDE 6: Our Contributions -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Contributions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">Our Contributions</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-6xl flex items-center justify-center">
+            <div class="grid grid-cols-3 gap-8 text-center">
+                
+                <!-- Contribution 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #2196F3;">
+                        <i class="fas fa-diagnoses"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">Identifying the "Last-Mile" Problem</h2>
+                    <p class="text-gray-600">We systematically demonstrate the gap between raw XAI outputs and the practical, actionable insights required by security analysts.</p>
+                </div>
+
+                <!-- Contribution 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #2196F3;">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">Critical Analysis of SHAP Outputs</h2>
+                    <p class="text-gray-600">We go beyond simply presenting XAI results and critically analyze their unintuitive nature when applied to preprocessed, scaled data.</p>
+                </div>
+
+                <!-- Contribution 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                    <div class="text-5xl mb-4" style="color: #2196F3;">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">Highlighting a Path Forward</h2>
+                    <p class="text-gray-600">We show that post-processing steps, like inverse transformation, are essential to bridge the gap and unlock the true potential of XAI in cybersecurity.</p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+</body>
+
+</html>

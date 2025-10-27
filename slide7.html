@@ -1,0 +1,97 @@
+<!-- SLIDE 7: Methodology Overview -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology Overview</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">Our Research Workflow</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-6xl flex items-center justify-center mt-10">
+            <div class="flex items-center justify-center space-x-4 text-center text-xl font-semibold">
+                
+                <!-- Step 1: Data -->
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center p-4">
+                         <i class="fas fa-database text-6xl text-gray-500 mb-2"></i>
+                         <h2 class="text-gray-800">1. Data</h2>
+                         <p class="text-sm font-normal text-gray-600">CIC-IDS-2017 Dataset</p>
+                    </div>
+                </div>
+
+                <i class="fas fa-long-arrow-alt-right text-4xl text-gray-400"></i>
+
+                <!-- Step 2: Preprocessing -->
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center p-4">
+                         <i class="fas fa-filter text-6xl text-gray-500 mb-2"></i>
+                         <h2 class="text-gray-800">2. Preprocessing</h2>
+                         <p class="text-sm font-normal text-gray-600">Cleaning, Feature Reduction, Standardization (Scaling)</p>
+                    </div>
+                </div>
+
+                <i class="fas fa-long-arrow-alt-right text-4xl text-gray-400"></i>
+
+                <!-- Step 3: Model Training -->
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 bg-white rounded-lg shadow-lg flex flex-col justify-center items-center p-4">
+                         <i class="fas fa-brain text-6xl text-blue-500 mb-2"></i>
+                         <h2 class="text-blue-800">3. DNN Model</h2>
+                         <p class="text-sm font-normal text-gray-600">Train a high-performance "black box" classifier</p>
+                    </div>
+                </div>
+
+                <i class="fas fa-long-arrow-alt-right text-4xl text-gray-400"></i>
+
+                <!-- Step 4: XAI Analysis -->
+                <div class="flex flex-col items-center">
+                    <div class="w-48 h-48 bg-yellow-50 rounded-lg shadow-lg flex flex-col justify-center items-center p-4 border-2 border-yellow-300">
+                         <i class="fas fa-search text-6xl text-yellow-600 mb-2"></i>
+                         <h2 class="text-yellow-800">4. XAI Analysis</h2>
+                         <p class="text-sm font-normal text-gray-600">Apply SHAP and critically analyze the raw explanations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 w-full max-w-4xl text-center p-4 bg-blue-50 rounded-lg">
+             <h3 class="text-xl font-bold" style="color: #003366;">Key Step: Standardization</h3>
+             <p class="text-lg text-gray-700 mt-1">Note the critical <span class="font-bold">Standardization</span> step, which scales features to have zero mean and unit variance. This is standard practice but, as we will see, it's the root cause of the "gap".</p>
+        </div>
+
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- SLIDE 11: The "Aha!" Moment: The Last-Mile Problem -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The "Aha!" Moment</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col justify-center items-center p-12 relative">
+
+        <h1 class="text-4xl font-bold" style="color: #003366;">The "Last-Mile" Problem in Action</h1>
+        <div class="w-24 h-1.5 mt-3" style="background-color: #2196F3;"></div>
+
+        <div class="flex-grow w-full max-w-6xl flex flex-col justify-center items-center mt-8">
+
+            <p class="text-2xl text-center text-gray-700">Let's re-examine the same attack explanation. What if we apply a simple <strong class="text-blue-600">inverse transform</strong> to the scaled values?</p>
+
+            <div class="mt-8 w-full grid grid-cols-2 gap-8 items-stretch">
+                <!-- Cột trái: Trước khi xử lý -->
+                <div class="col-span-1 bg-red-50 p-6 rounded-lg border-2 border-red-200">
+                    <h2 class="text-2xl font-bold text-red-800 mb-4 text-center">
+                        <i class="fas fa-times-circle mr-2"></i>Raw SHAP Output (Unintelligible)
+                    </h2>
+                    <div class="text-lg space-y-3 font-mono bg-white p-4 rounded">
+                        <p>"Prediction pushed by:</p>
+                        <p class="ml-4">ACK Flag Count = <span class="font-bold text-red-600">1.473...</span></p>
+                        <p class="ml-4">Fwd PSH Flags = <span class="font-bold text-red-600">4.535...</span></p>
+                        <p class="ml-4">Packet Length Var = <span class="font-bold text-blue-600">-0.123...</span></p>
+                        <p class="ml-4">Destination Port = <span class="font-bold text-blue-600">-0.439...</span></p>
+                        <p>..."</p>
+                    </div>
+                </div>
+
+                <!-- Mũi tên chuyển đổi -->
+                <!-- <div class="flex items-center justify-center text-5xl text-gray-400">
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div> -->
+
+                <!-- Cột phải: Sau khi xử lý -->
+                <div class="col-span-1 bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                     <h2 class="text-2xl font-bold text-green-800 mb-4 text-center">
+                        <i class="fas fa-check-circle mr-2"></i>Human-Readable Explanation (Actionable)
+                    </h2>
+                     <div class="text-lg space-y-3 bg-white p-4 rounded">
+                        <p>"This is an ATTACK because:</p>
+                        <p class="ml-4">ACK Flag Count = <span class="font-bold bg-green-200 px-2 rounded">0</span> and PSH Flag Count = <span class="font-bold bg-green-200 px-2 rounded">1</span> (an atypical flag combination).</p>
+                        <p class="ml-4">Packet Length Variance = <span class="font-bold bg-green-200 px-2 rounded">0</span> (all packets are the same size, typical of a scan).</p>
+                        <p class="ml-4">Destination Port = <span class="font-bold bg-green-200 px-2 rounded">444</span> (a non-standard port used by Metasploit).</p>
+                        <p>..."</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+
+    <!-- Navigation buttons and script -->
+    <a id="prev-slide"
+        class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-left text-6xl"></i>
+    </a>
+    <a id="next-slide"
+        class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50"
+        href="#">
+        <i class="fas fa-chevron-right text-6xl"></i>
+    </a>
+    <script src="navigation.js" defer></script>
+
+</body>
+</html>

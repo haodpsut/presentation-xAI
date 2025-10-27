@@ -1,0 +1,95 @@
+<!-- SLIDE 8: Baseline Model Performance -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baseline Model Performance</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide-canvas antialiased bg-gray-100 flex flex-col p-12 relative">
+
+        <!-- Header -->
+        <div class="text-center flex-shrink-0">
+            <h1 class="text-4xl font-bold" style="color: #003366;">First, We Need a Good "Black Box"</h1>
+            <div class="w-24 h-1.5 mt-3 mx-auto" style="background-color: #2196F3;"></div>
+        </div>
+
+        <!-- Main Content Area: Bố cục 2 cột -->
+        <div class="flex-grow grid grid-cols-2 gap-8 items-center mt-4">
+            
+            <!-- CỘT TRÁI: Confusion Matrix (Figure 1) -->
+            <div class="col-span-1 h-full flex flex-col items-center justify-center">
+                 <div class="w-full bg-white p-4 rounded-xl shadow-lg" style="height: 400px;">
+                    <img src="images/figure1_confusion_matrix.png" alt="Confusion Matrix" 
+                         class="w-full h-full object-contain">
+                </div>
+                <p class="text-sm text-gray-500 mt-2 italic">Fig. 1. Confusion matrix of the DNN model on the test set.</p>
+            </div>
+
+            <!-- CỘT PHẢI: Bảng kết quả và diễn giải -->
+            <div class="col-span-1 h-full flex flex-col justify-center space-y-6">
+                
+                <!-- Bảng kết quả -->
+                <div class="w-full bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table class="w-full text-center text-lg">
+                        <thead class="bg-gray-700 text-white">
+                            <tr><th colspan="4" class="py-2">Performance Metrics of the DNN Model</th></tr>
+                        </thead>
+                        <tbody class="text-gray-800">
+                             <tr class="font-semibold bg-gray-200">
+                                <td class="py-3 px-2">Class</td>
+                                <td class="py-3 px-2">Precision</td>
+                                <td class="py-3 px-2">Recall</td>
+                                <td class="py-3 px-2">F1-Score</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-2 font-semibold">BENIGN</td>
+                                <td class="py-3 px-2">1.00</td>
+                                <td class="py-3 px-2">1.00</td>
+                                <td class="py-3 px-2">1.00</td>
+                            </tr>
+                             <tr class="bg-gray-100">
+                                <td class="py-3 px-2 font-semibold">ATTACK</td>
+                                <td class="py-3 px-2">0.98</td>
+                                <td class="py-3 px-2">0.99</td>
+                                <td class="py-3 px-2">0.99</td>
+                            </tr>
+                             <tr class="bg-blue-200 font-bold text-blue-900">
+                                <td class="py-3 px-2" colspan="3">Overall Accuracy</td>
+                                <td class="py-3 px-2">99.47%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Diễn giải -->
+                <div class="bg-green-50 p-5 rounded-lg border-l-4 border-green-500">
+                    <h3 class="text-2xl font-bold text-green-800 flex items-center mb-3">
+                        <i class="fas fa-check-circle mr-3"></i>Excellent Performance
+                    </h3>
+                    <p class="text-xl text-gray-700">The model achieves near-perfect detection, with an F1-score of <strong>0.99</strong> for attacks and an overall accuracy of <strong>99.47%</strong>.</p>
+                    <p class="text-xl text-gray-700 mt-2">This confirms we have a high-fidelity, representative "black box" whose decision-making process is worth investigating.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="slide-footer">
+            <div class="w-1/4 text-left">Phuc Hao Do et al.</div>
+            <div class="w-1/2 text-center">Mind the Gap: Practical Utility of SHAP for NIDS</div>
+            <div id="slide-counter" class="w-1/4 text-right"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation (không đổi) -->
+    <a id="prev-slide" class="fixed left-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-left text-6xl"></i></a>
+    <a id="next-slide" class="fixed right-0 top-1/2 -translate-y-1/2 p-6 text-transparent hover:text-white/50 transition-colors duration-300 z-50" href="#"><i class="fas fa-chevron-right text-6xl"></i></a>
+    <script src="navigation.js" defer></script>
+</body>
+</html>
